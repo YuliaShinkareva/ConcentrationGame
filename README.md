@@ -1,7 +1,11 @@
 # ConcentrationGame
+=> Card Match Game
 
-MVVM approach/SwiftUI
-different themes can be chosen
+=> MVVM approach/SwiftUI
+
+=> different themes can be chosen
+
+=> new modifications are coming soon
 
 
 <img width="323" alt="Screenshot 2023-06-29 at 11 02 19" src="https://github.com/YuliaShinkareva/ConcentrationGame/assets/112308390/e0c88cf2-aa26-4514-a856-b15cfa07bd61">
