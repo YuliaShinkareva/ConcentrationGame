@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		969992402A1B5EEA00873332 /* ConcentrationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699923F2A1B5EEA00873332 /* ConcentrationApp.swift */; };
-		969992422A1B5EEA00873332 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969992412A1B5EEA00873332 /* ContentView.swift */; };
+		969992422A1B5EEA00873332 /* EmojiConcentrateGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969992412A1B5EEA00873332 /* EmojiConcentrateGameView.swift */; };
 		969992442A1B5EEB00873332 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 969992432A1B5EEB00873332 /* Assets.xcassets */; };
 		969992472A1B5EEB00873332 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 969992462A1B5EEB00873332 /* Preview Assets.xcassets */; };
 		9699924E2A20B87900873332 /* ConcentrateGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699924D2A20B87900873332 /* ConcentrateGame.swift */; };
@@ -19,7 +19,7 @@
 /* Begin PBXFileReference section */
 		9699923C2A1B5EEA00873332 /* Concentration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concentration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9699923F2A1B5EEA00873332 /* ConcentrationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrationApp.swift; sourceTree = "<group>"; };
-		969992412A1B5EEA00873332 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		969992412A1B5EEA00873332 /* EmojiConcentrateGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiConcentrateGameView.swift; sourceTree = "<group>"; };
 		969992432A1B5EEB00873332 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		969992462A1B5EEB00873332 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9699924D2A20B87900873332 /* ConcentrateGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrateGame.swift; sourceTree = "<group>"; };
@@ -59,8 +59,8 @@
 			children = (
 				9699924D2A20B87900873332 /* ConcentrateGame.swift */,
 				9699923F2A1B5EEA00873332 /* ConcentrationApp.swift */,
-				969992412A1B5EEA00873332 /* ContentView.swift */,
 				9699924F2A20BE2700873332 /* EmojiConcentrationGame.swift */,
+				969992412A1B5EEA00873332 /* EmojiConcentrateGameView.swift */,
 				96E786B92A4CCA650086AC3D /* Theme.swift */,
 				969992432A1B5EEB00873332 /* Assets.xcassets */,
 				969992452A1B5EEB00873332 /* Preview Content */,
@@ -147,7 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				969992502A20BE2700873332 /* EmojiConcentrationGame.swift in Sources */,
-				969992422A1B5EEA00873332 /* ContentView.swift in Sources */,
+				969992422A1B5EEA00873332 /* EmojiConcentrateGameView.swift in Sources */,
 				96E786BA2A4CCA650086AC3D /* Theme.swift in Sources */,
 				9699924E2A20B87900873332 /* ConcentrateGame.swift in Sources */,
 				969992402A1B5EEA00873332 /* ConcentrationApp.swift in Sources */,

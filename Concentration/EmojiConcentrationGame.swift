@@ -9,7 +9,7 @@ import SwiftUI
  
 
 class EmojiConcentrateGame: ObservableObject  {
-    
+    typealias Card = ConcentrateGame<String>.Card
     
     @Published private var model: ConcentrateGame<String>
     private var theme: Theme
@@ -20,7 +20,7 @@ class EmojiConcentrateGame: ObservableObject  {
         model = EmojiConcentrateGame.createConcentrateGame(theme: theme)
     }
     
-    static var themes: Array<Theme> = [
+    private static var themes: Array<Theme> = [
     Theme(
         name: "Animals",
         emojis: ["🐶", "🐱", "🐭", "🐹", "🦊", "🐼", "🐨", "🐯", "🦁", "🐮", "🐷", "🐸", "🐵", "🐔", "🦉", "🦄", "🦋", "🐌", "🐜", "🐢"],
@@ -55,7 +55,7 @@ class EmojiConcentrateGame: ObservableObject  {
     )]
     
 
-    static func createConcentrateGame(theme: Theme) ->  ConcentrateGame<String> {
+    private static func createConcentrateGame(theme: Theme) ->  ConcentrateGame<String> {
         ConcentrateGame<String>(numberOfPairsOfCards: theme.numberOfPairsOfCards) { pairIndex in
             theme.emojis[pairIndex]
 
@@ -80,7 +80,8 @@ class EmojiConcentrateGame: ObservableObject  {
             return .gray
         }
     }
-    var themeName: String {
+    
+   var themeName: String {
         theme.name
     }
     
@@ -90,12 +91,12 @@ class EmojiConcentrateGame: ObservableObject  {
     }
     
  
-    var cards: Array<ConcentrateGame<String>.Card> {
+    var cards: Array<Card> {
            model.cards
         }
     // MARK: - Intent(s)
 
-    func choose(_ card: ConcentrateGame<String>.Card) {
+    func choose(_ card: Card) {
         model.choose(card)
     }
     

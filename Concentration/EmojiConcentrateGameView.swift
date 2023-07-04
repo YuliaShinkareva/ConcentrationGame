@@ -1,12 +1,12 @@
 //
-//  ContentView.swift
+//  EmojiConcentrateGameView.swift
 //  Concentration
 //
 //  Created by yulias on 22/05/2023.
 
 import SwiftUI
 
-struct ContentView: View {
+struct EmojiConcentrateGameView: View {
     @ObservedObject var viewModel: EmojiConcentrateGame
     
     
@@ -16,7 +16,7 @@ struct ContentView: View {
                     .font(.title)
                     .minimumScaleFactor(0.5)
                     .lineLimit(1)
-                Text("Score: \(viewModel.score)").font(.largeTitle)
+                Text("Score: \(viewModel.score)").font(.largeTitle).foregroundColor(.red)
                 ScrollView {
                     LazyVGrid(columns: [GridItem(.adaptive(minimum: 75))]) {
                         ForEach(viewModel.cards) { card in
@@ -38,7 +38,6 @@ struct ContentView: View {
                         .font(.largeTitle)
                 }
             }
-            .padding()
         }
     }
 
@@ -46,26 +45,37 @@ struct ContentView: View {
  
 struct CardView: View {
 
-    let card: ConcentrateGame<String>.Card
-    let shape = RoundedRectangle(cornerRadius: 25)
+  let card: EmojiConcentrateGame.Card
+    let shape = RoundedRectangle(cornerRadius: DrawingConstants.conrnerRadius)
 
-
+    
     var body: some View {
-        ZStack {
-            if card.isFaceUp {
-                shape
-                    .fill(.white)
-                shape
-                    .strokeBorder(lineWidth: 3)
-                Text(card.content)
-                    .font(.largeTitle)
-            } else if card.isMatched {
-                shape.opacity(0)
-            } else {
-                shape
+        GeometryReader { geometry in
+            ZStack {
+                if card.isFaceUp {
+                    shape
+                        .fill(.white)
+                    shape
+                        .strokeBorder(lineWidth: DrawingConstants.lineWidth)
+                    Text(card.content).font(font(in: geometry.size))
+                } else if card.isMatched {
+                    shape.opacity(0)
+                } else {
+                    shape
+                }
+                
             }
-
-        }
+    }
+    }
+    
+    private func font(in size: CGSize) -> Font {
+        Font.system(size: min(size.width, size.height) * DrawingConstants.fontScale)
+    }
+    
+    private struct DrawingConstants {
+        static let conrnerRadius: CGFloat = 25
+        static let lineWidth: CGFloat = 3
+        static let fontScale: CGFloat = 0.9
     }
 }
 
@@ -75,9 +85,9 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         let game = EmojiConcentrateGame()
         
-        ContentView(viewModel: game)
+        EmojiConcentrateGameView(viewModel: game)
             .preferredColorScheme(.dark)
-        ContentView(viewModel: game)
+        EmojiConcentrateGameView(viewModel: game)
             .preferredColorScheme(.light)
     }
 }

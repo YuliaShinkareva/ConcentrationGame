@@ -10,13 +10,14 @@ import Foundation
 struct ConcentrateGame<CardContent> where CardContent: Equatable {
     private(set) var cards: Array<Card>
     private(set) var score = 0
- 
+
     private var faceUpCardIndex: Int?
 
+
     mutating func choose(_ card: Card) {
-        if let chosenIndex = cards.firstIndex(where: {$0.id == card.id}),
-            !cards[chosenIndex].isFaceUp,
-            !cards[chosenIndex].isMatched
+        if let chosenIndex = cards.firstIndex(where: { $0.id == card.id }),
+           !cards[chosenIndex].isFaceUp,
+           !cards[chosenIndex].isMatched
         {
             if let matchCardIndex = faceUpCardIndex {
                 if cards[chosenIndex].content == cards[matchCardIndex].content {
@@ -30,23 +31,22 @@ struct ConcentrateGame<CardContent> where CardContent: Equatable {
                 }
                 faceUpCardIndex = nil
             } else {
-                for index in 0..<cards.count {
+                for index in cards.indices {
                     if cards[index].isFaceUp {
                         cards[index].isFaceUp = false
                         cards[index].hasAlreadyBeenSeen = true
                     }
-             
+               
                 }
                 faceUpCardIndex = chosenIndex
             }
             cards[chosenIndex].isFaceUp.toggle()
         }
-    }
-
+        }
 
 
     init(numberOfPairsOfCards: Int, createCardContent: (Int) -> CardContent) {
-        cards = Array<Card>()
+        cards = []
 
         for pairIndex in 0..<numberOfPairsOfCards {
             let content = createCardContent(pairIndex)
@@ -57,12 +57,20 @@ struct ConcentrateGame<CardContent> where CardContent: Equatable {
     }
 
     struct Card: Identifiable {
-        var isFaceUp: Bool = false
-        var isMatched: Bool = false
+        var isFaceUp = false
+        var isMatched = false
         var hasAlreadyBeenSeen = false
-        var content: CardContent
-        var id: Int
+        let content: CardContent
+        let id: Int
     }
 }
 
- 
+extension Array {
+    var oneAndOnly: Element? {
+        if self.count == 1 {
+            return first
+        } else {
+            return nil
+        }
+    }
+}
