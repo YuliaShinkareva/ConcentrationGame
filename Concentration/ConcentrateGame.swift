@@ -12,6 +12,10 @@ struct ConcentrateGame<CardContent> where CardContent: Equatable {
     private(set) var score = 0
 
     private var faceUpCardIndex: Int?
+        {
+            get { cards.indices.filter({ cards[$0].isFaceUp }).oneAndOnly }
+            set { cards.indices.forEach { cards[$0].isFaceUp = ($0 == newValue) } }
+        }
 
 
     mutating func choose(_ card: Card) {
@@ -29,18 +33,12 @@ struct ConcentrateGame<CardContent> where CardContent: Equatable {
                         score -= 1
                     }
                 }
-                faceUpCardIndex = nil
+                cards[chosenIndex].isFaceUp = true
+                cards[chosenIndex].hasAlreadyBeenSeen = true
             } else {
-                for index in cards.indices {
-                    if cards[index].isFaceUp {
-                        cards[index].isFaceUp = false
-                        cards[index].hasAlreadyBeenSeen = true
-                    }
-               
-                }
                 faceUpCardIndex = chosenIndex
             }
-            cards[chosenIndex].isFaceUp.toggle()
+  
         }
         }
 
