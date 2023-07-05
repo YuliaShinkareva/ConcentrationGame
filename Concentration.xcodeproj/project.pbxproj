@@ -14,6 +14,7 @@
 		9699924E2A20B87900873332 /* ConcentrateGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699924D2A20B87900873332 /* ConcentrateGame.swift */; };
 		969992502A20BE2700873332 /* EmojiConcentrationGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699924F2A20BE2700873332 /* EmojiConcentrationGame.swift */; };
 		96E786BA2A4CCA650086AC3D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E786B92A4CCA650086AC3D /* Theme.swift */; };
+		96E786BC2A5565EE0086AC3D /* AspectVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E786BB2A5565EE0086AC3D /* AspectVGrid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		9699924D2A20B87900873332 /* ConcentrateGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrateGame.swift; sourceTree = "<group>"; };
 		9699924F2A20BE2700873332 /* EmojiConcentrationGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiConcentrationGame.swift; sourceTree = "<group>"; };
 		96E786B92A4CCA650086AC3D /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		96E786BB2A5565EE0086AC3D /* AspectVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectVGrid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		9699923E2A1B5EEA00873332 /* Concentration */ = {
 			isa = PBXGroup;
 			children = (
+				96E786BB2A5565EE0086AC3D /* AspectVGrid.swift */,
 				9699924D2A20B87900873332 /* ConcentrateGame.swift */,
 				9699923F2A1B5EEA00873332 /* ConcentrationApp.swift */,
 				9699924F2A20BE2700873332 /* EmojiConcentrationGame.swift */,
@@ -148,6 +151,7 @@
 			files = (
 				969992502A20BE2700873332 /* EmojiConcentrationGame.swift in Sources */,
 				969992422A1B5EEA00873332 /* EmojiConcentrateGameView.swift in Sources */,
+				96E786BC2A5565EE0086AC3D /* AspectVGrid.swift in Sources */,
 				96E786BA2A4CCA650086AC3D /* Theme.swift in Sources */,
 				9699924E2A20B87900873332 /* ConcentrateGame.swift in Sources */,
 				969992402A1B5EEA00873332 /* ConcentrationApp.swift in Sources */,

@@ -17,17 +17,17 @@ struct EmojiConcentrateGameView: View {
                     .minimumScaleFactor(0.5)
                     .lineLimit(1)
                 Text("Score: \(viewModel.score)").font(.largeTitle).foregroundColor(.red)
-                ScrollView {
-                    LazyVGrid(columns: [GridItem(.adaptive(minimum: 75))]) {
-                        ForEach(viewModel.cards) { card in
-                            CardView(card: card)
-                                .aspectRatio(2/3, contentMode: .fit)
-                                .onTapGesture {
-                                    viewModel.choose(card)
-                                }
+                AspectVGrid(items: viewModel.cards, aspectRatio: 2/3) { card in
+                if card.isMatched && !card.isFaceUp {
+                    Rectangle().opacity(0)
+                } else {
+                    CardView(card: card)
+                    .padding(4)
+                        .onTapGesture {
+                            viewModel.choose(card)
                         }
-                    }
                 }
+            }
                 .foregroundColor(viewModel.themeColor)
                 .padding()
                 
@@ -73,9 +73,9 @@ struct CardView: View {
     }
     
     private struct DrawingConstants {
-        static let conrnerRadius: CGFloat = 25
+        static let conrnerRadius: CGFloat = 10
         static let lineWidth: CGFloat = 3
-        static let fontScale: CGFloat = 0.9
+        static let fontScale: CGFloat = 0.75
     }
 }
 
