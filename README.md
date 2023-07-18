@@ -9,5 +9,10 @@
 
 => new modifications are coming soon
 
-<img width="325" alt="Screenshot 2023-07-05 at 12 30 38" src="https://github.com/YuliaShinkareva/ConcentrationGame/assets/112308390/7293c3a2-9d20-4e11-bd0e-ab59d470eb25">
-<img width="332" alt="Screenshot 2023-07-05 at 12 31 20" src="https://github.com/YuliaShinkareva/ConcentrationGame/assets/112308390/1c3cd63c-e851-4c77-b259-f96d7b277202">
+=> animation / shapes
+
+<img width="328" alt="Screenshot 2023-07-18 at 14 45 36" src="https://github.com/YuliaShinkareva/ConcentrationGame/assets/112308390/37c702fe-a32a-4a81-89f4-498894e51749">
+<img width="337" alt="Screenshot 2023-07-18 at 14 03 01" src="https://github.com/YuliaShinkareva/ConcentrationGame/assets/112308390/57ba90ae-6c7a-4f50-aabb-dac261bbcebf">
+<img width="335" alt="Screenshot 2023-07-18 at 14 02 07" src="https://github.com/YuliaShinkareva/ConcentrationGame/assets/112308390/bc35b092-d105-4073-b5f9-f41574bd7b0b">
+
+
