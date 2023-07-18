@@ -6,25 +6,24 @@
 
 
 import SwiftUI
- 
+
 
 class EmojiConcentrateGame: ObservableObject  {
     typealias Card = ConcentrateGame<String>.Card
-    
+
     @Published private var model: ConcentrateGame<String>
     private var theme: Theme
-    
+
     init() {
         theme = EmojiConcentrateGame.themes.randomElement()!
         theme.emojis.shuffle()
         model = EmojiConcentrateGame.createConcentrateGame(theme: theme)
     }
-    
+
     private static var themes: Array<Theme> = [
     Theme(
         name: "Animals",
         emojis: ["🐶", "🐱", "🐭", "🐹", "🦊", "🐼", "🐨", "🐯", "🦁", "🐮", "🐷", "🐸", "🐵", "🐔", "🦉", "🦄", "🦋", "🐌", "🐜", "🐢"],
-//        numberOfPairsOfCards: 10,
         color: "orange"
     ),
     Theme(
@@ -53,7 +52,7 @@ class EmojiConcentrateGame: ObservableObject  {
         color: "indigo"
 
     )]
-    
+
 
     private static func createConcentrateGame(theme: Theme) ->  ConcentrateGame<String> {
         ConcentrateGame<String>(numberOfPairsOfCards: theme.numberOfPairsOfCards) { pairIndex in
@@ -61,7 +60,7 @@ class EmojiConcentrateGame: ObservableObject  {
 
         }
     }
-    
+
     var themeColor: Color {
         switch theme.color {
         case "orange":
@@ -80,17 +79,18 @@ class EmojiConcentrateGame: ObservableObject  {
             return .gray
         }
     }
-    
+
    var themeName: String {
         theme.name
     }
-    
-  
+
+
+
     var score: Int {
         model.score
     }
-    
- 
+
+
     var cards: Array<Card> {
            model.cards
         }
@@ -99,12 +99,20 @@ class EmojiConcentrateGame: ObservableObject  {
     func choose(_ card: Card) {
         model.choose(card)
     }
-    
+
     func newGame() {
         theme = EmojiConcentrateGame.themes.randomElement()!
         theme.emojis.shuffle()
         model = EmojiConcentrateGame.createConcentrateGame(theme: theme)
     }
+    
+    func shuffle() {
+        model.shuffle()
     }
-
+    
+//    func restart() {
+//        model = EmojiConcentrateGame.createConcentrateGame(theme: theme)
+//        
+//    }
+    }
 

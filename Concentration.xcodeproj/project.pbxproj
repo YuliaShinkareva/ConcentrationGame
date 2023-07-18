@@ -15,6 +15,8 @@
 		969992502A20BE2700873332 /* EmojiConcentrationGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699924F2A20BE2700873332 /* EmojiConcentrationGame.swift */; };
 		96E786BA2A4CCA650086AC3D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E786B92A4CCA650086AC3D /* Theme.swift */; };
 		96E786BC2A5565EE0086AC3D /* AspectVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E786BB2A5565EE0086AC3D /* AspectVGrid.swift */; };
+		96E786BE2A56A4490086AC3D /* CircleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E786BD2A56A4490086AC3D /* CircleShape.swift */; };
+		96E786C02A5D67A10086AC3D /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E786BF2A5D67A10086AC3D /* Cardify.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		9699924F2A20BE2700873332 /* EmojiConcentrationGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiConcentrationGame.swift; sourceTree = "<group>"; };
 		96E786B92A4CCA650086AC3D /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		96E786BB2A5565EE0086AC3D /* AspectVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectVGrid.swift; sourceTree = "<group>"; };
+		96E786BD2A56A4490086AC3D /* CircleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleShape.swift; sourceTree = "<group>"; };
+		96E786BF2A5D67A10086AC3D /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				96E786BB2A5565EE0086AC3D /* AspectVGrid.swift */,
+				96E786BF2A5D67A10086AC3D /* Cardify.swift */,
+				96E786BD2A56A4490086AC3D /* CircleShape.swift */,
 				9699924D2A20B87900873332 /* ConcentrateGame.swift */,
 				9699923F2A1B5EEA00873332 /* ConcentrationApp.swift */,
 				9699924F2A20BE2700873332 /* EmojiConcentrationGame.swift */,
@@ -151,7 +157,9 @@
 			files = (
 				969992502A20BE2700873332 /* EmojiConcentrationGame.swift in Sources */,
 				969992422A1B5EEA00873332 /* EmojiConcentrateGameView.swift in Sources */,
+				96E786C02A5D67A10086AC3D /* Cardify.swift in Sources */,
 				96E786BC2A5565EE0086AC3D /* AspectVGrid.swift in Sources */,
+				96E786BE2A56A4490086AC3D /* CircleShape.swift in Sources */,
 				96E786BA2A4CCA650086AC3D /* Theme.swift in Sources */,
 				9699924E2A20B87900873332 /* ConcentrateGame.swift in Sources */,
 				969992402A1B5EEA00873332 /* ConcentrationApp.swift in Sources */,

@@ -10,7 +10,6 @@ import SwiftUI
 @main
 struct ConcentrationApp: App {
     private let game = EmojiConcentrateGame()
-    
     var body: some Scene {
         WindowGroup {
             EmojiConcentrateGameView(viewModel: game)
